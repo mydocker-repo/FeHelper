@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeHelper - 前端开发者的超级助手</title>
+    <meta name="description" content="FeHelper是一个专为前端开发者设计的强大浏览器扩展，集成31种实用工具：JSON美化/Mock数据生成/AI助手/接口调试/图像处理等，支持Chrome/Edge/Firefox，开源免费！">
+    <meta property="og:title" content="FeHelper - 前端开发者的超级助手" />
+    <meta property="og:description" content="专为前端开发者设计！31种实用工具，JSON美化/Mock数据/AI助手/接口调试，支持Chrome/Edge/Firefox，开源免费！" />
+    <meta property="og:image" content="https://fehelper.com/static/img/fe-128.png" />
+    <meta property="og:url" content="https://fehelper.com/" />
+    <meta itemprop="name" content="FeHelper - 职场人的超级助手">
+    <meta itemprop="description" content="全新升级！30+实用工具，支持Chrome/Edge/Firefox，开源免费，前端/数据/办公必备！">
+    <meta itemprop="image" content="https://fehelper.com/static/img/fe-128.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="website/static/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="website/static/img/fe-16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="website/static/img/fe-48.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="website/static/img/fe-128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="website/static/img/fe-128.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="website/static/css/style.css?v=20250711">
+    
+
+
+
+
+</head>
+<body>
+    
+    <!-- 工具界面预览区 -->
+    <section class="tool-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2>工具界面预览</h2>
+          <p>真实截图，所见即所得，体验极致流畅</p>
+        </div>
+        <div class="preview-images">
+          <div class="preview-item">
+            <img src="static/screenshot/options.png" alt="FeHelper主界面" />
+            <div class="preview-caption">插件配置页</div>
+          </div>
+          <div class="preview-item">
+            <img src="static/screenshot/json-format.png" alt="JSON美化工具界面" />
+            <div class="preview-caption">JSON美化工具</div>
+          </div>
+          <div class="preview-item">
+            <img src="static/screenshot/qr-code.png" alt="二维码工具界面" />
+            <div class="preview-caption">二维码工具</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>强大的工具集</h2>
+                <p>每一个工具都经过精心设计，只为提升您的开发效率</p>
+            </div>
+            <div class="tools-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="dev">开发工具类 (9种)</button>
+                    <button class="tab-btn" data-category="image">图像处理类 (7种)</button>
+                    <button class="tab-btn" data-category="encode">编解码转换类 (4种)</button>
+                    <button class="tab-btn" data-category="productivity">效率工具类 (4种)</button>
+                    <button class="tab-btn" data-category="calculator">计算工具类 (3种)</button>
+                    <button class="tab-btn" data-category="other">其他工具 (4种)</button>
+                </div>
+
+                <!-- 开发工具类 -->
+                <div class="tools-grid active" data-category="dev">
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>⒥</span></div>JSON美化工具</h3>
+                        <p>页面自动检测并格式化、手动格式化、乱码解码、排序、BigInt、编辑、下载、皮肤定制等</p>
+                        <div class="tool-demo"><div class="json-demo"><pre><code>{
+  "name": "FeHelper",
+  "version": "2025.6.2024",
+  "tools": ["JSON", "Mock", "AI", "Debug"]
+}</code></pre></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>☷</span></div>JSON比对工具</h3>
+                        <p>支持两个JSON内容的自动键值比较，并高亮显示差异点，同时也能判断JSON是否合法</p>
+                        <div class="tool-demo"><div class="diff-demo"><div class="diff-left">原始</div><div class="diff-right">修改后</div><div class="diff-line added">+ "ai": "智能助手"</div><div class="diff-line removed">- "old": "旧功能"</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>🎲</span></div>Mock数据生成器</h3>
+                        <p>快速生成各种测试数据，支持个人信息、商业数据、技术数据等多种类型，提供快速模板一键生成，支持JSON/CSV/SQL/XML格式输出</p>
+                        <div class="tool-demo"><div class="mock-demo"><div class="mock-item">{"name": "张三", "age": 28}</div><div class="mock-item">{"email": "test@example.com"}</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>✡</span></div>代码美化工具</h3>
+                        <p>支持多语言的代码美化，包括 Javascript、CSS、HTML、XML、SQL，且会陆续支持更多格式</p>
+                        <div class="tool-demo"><div class="code-demo"><div class="code-before">压缩代码</div><span class="demo-arrow">→</span><div class="code-after">格式化代码</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>♯</span></div>代码压缩工具</h3>
+                        <p>Web开发用，提供简单的代码压缩功能，支持HTML、Javascript、CSS代码压缩</p>
+                        <div class="tool-demo"><div class="compress-demo"><div class="size-before">100KB</div><span class="demo-arrow">→</span><div class="size-after">65KB</div><div class="compress-ratio">35% 压缩率</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>☯</span></div>简易Postman</h3>
+                        <p>开发过程中的接口调试工具，支持GET/POST/HEAD请求方式，且支持JSON内容自动格式化</p>
+                        <div class="tool-demo"><div class="api-demo"><div class="request-line">POST /api/users</div><div class="response-status success">200 OK</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>ⓦ</span></div>Websocket工具</h3>
+                        <p>支持对Websocket接口的抓包测试，包括ws服务的连接测试、消息发送测试、结果分析等</p>
+                        <div class="tool-demo"><div class="websocket-demo"><div class="ws-status connected"><span class="ws-indicator">●</span> 已连接</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>✙</span></div>正则公式速查</h3>
+                        <p>支持 JavaScript / Python / PHP / Java 等语言的正则速查，包含验证类、提取类、替换类、格式化类、特殊字符类、编程相关等常用正则表达式</p>
+                    </div>
+                    <div class="tool-card" data-category="dev">
+                        <h3><div class="tool-icon"><span>⏱</span></div>网站性能分析</h3>
+                        <p>全面分析网页性能指标，包括核心Web指标(LCP/FID/CLS)、资源加载性能、内存使用、长任务监控等，并提供针对性的优化建议</p>
+                    </div>
+                </div>
+
+                <!-- 编解码转换类 -->
+                <div class="tools-grid" data-category="encode">
+                    <div class="tool-card" data-category="encode">
+                        <h3><div class="tool-icon"><span>♨</span></div>信息编码转换</h3>
+                        <p>支持多格式的信息编解码，如Unicode、UTF-8、UTF-16、URL、Base64、MD5、Hex、Gzip等</p>
+                        <div class="tool-demo"><div class="encode-demo"><div class="encode-input">Hello World</div><div class="encode-arrows"><span class="demo-arrow">⇄</span></div><div class="encode-output">SGVsbG8gV29ybGQ=</div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="encode">
+                        <h3><div class="tool-icon"><span>❖</span></div>进制转换工具</h3>
+                        <p>支持2进制到36进制数据之间的任意转换，比如：10进制转2进制，8进制转16进制，等等</p>
+                    </div>
+                    <div class="tool-card" data-category="encode">
+                        <h3><div class="tool-icon"><span>♖</span></div>时间(戳)转换</h3>
+                        <p>本地化时间与时间戳之间的相互转换，支持秒/毫秒、支持世界时区切换、各时区时钟展示等</p>
+                    </div>
+                    <div class="tool-card" data-category="encode">
+                        <h3><div class="tool-icon"><span>▶</span></div>颜色转换工具</h3>
+                        <p>支持HEX颜色到RGB格式的互转，比如HEX颜色「#43ad7f」转RGB后为「rgb(67, 173, 127)」</p>
+                    </div>
+                </div>
+
+                <!-- 图像处理类 -->
+                <div class="tools-grid" data-category="image">
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>▣</span></div>二维码/解码</h3>
+                        <p>支持自定义颜色和icon的二维码生成器，并且支持多种模式的二维码解码，包括截图后粘贴解码</p>
+                        <div class="tool-demo"><div class="qr-demo"><div class="qr-code"><div class="qr-pattern"></div></div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>▤</span></div>图片转Base64</h3>
+                        <p>支持多种模式的图片转Base64格式，比如链接粘贴/截图粘贴等，也支持Base64数据逆转图片</p>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>⇲</span></div>SVG转为图片</h3>
+                        <p>支持SVG文件转换为PNG、JPG、WEBP等格式，可自定义输出尺寸，支持文件拖放和URL导入</p>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>📊</span></div>图表制作工具</h3>
+                        <p>快速制作各类数据可视化图表，支持柱状图、折线图、饼图等多种图表类型，可导出为图片格式</p>
+                        <div class="tool-demo"><div class="color-gradient-demo"></div></div>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>🖼️</span></div>海报快速生成</h3>
+                        <p>快速创建营销推广海报，支持朋友圈、小红书等多种模板，可自定义文字、图片和配色</p>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>✂</span></div>网页截屏工具</h3>
+                        <p>可对任意网页进行截屏，支持可视区域截屏、全网页滚动截屏，最终结果可预览后再保存</p>
+                    </div>
+                    <div class="tool-card" data-category="image">
+                        <h3><div class="tool-icon"><span>✑</span></div>页面取色工具</h3>
+                        <p>可直接在网页上针对任意元素进行色值采集，将光标移动到需要取色的位置，单击确定即可</p>
+                        <div class="tool-demo"><div class="color-picker-demo"></div></div>
+                    </div>
+                </div>
+
+                <!-- 效率工具类 -->
+                <div class="tools-grid" data-category="productivity">
+                    <div class="tool-card" data-category="productivity">
+                        <h3><div class="tool-icon"><span>🤖</span></div>AI智能助手</h3>
+                        <p>由AI强力支撑的超智能对话工具，可以让它帮你写代码、改代码、做方案设计、查资料、做分析等</p>
+                        <div class="tool-demo"><div class="ai-chat-demo">💬 AI: 我可以帮您优化代码...</div></div>
+                    </div>
+                    <div class="tool-card" data-category="productivity">
+                        <h3><div class="tool-icon"><span>📝</span></div>我的便签笔记</h3>
+                        <p>方便快捷的浏览器便签笔记工具，支持创建目录对笔记进行分类管理，笔记支持一键导出/导入</p>
+                        <div class="tool-demo"><div class="sticky-notes-demo"><div class="note-yellow"></div><div class="note-green"></div><div class="note-blue"></div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="productivity">
+                        <h3><div class="tool-icon"><span>📄</span></div>Markdown转换</h3>
+                        <p>Markdown编写/预览工具，支持HTML片段直接转Markdown，支持将内容以PDF格式进行下载</p>
+                        <div class="tool-demo"><div class="markdown-demo"># 标题<br/>**粗体** *斜体*</div></div>
+                    </div>
+                    <div class="tool-card" data-category="productivity">
+                        <h3><div class="tool-icon"><span>🐒</span></div>网页油猴工具</h3>
+                        <p>自行配置页面匹配规则、编写Hack脚本，实现网页Hack，如页面自动刷新、自动抢票等</p>
+                        <div class="tool-demo"><div class="monkey-script-demo">// 自动刷新脚本<br/>setInterval(refresh, 5000)</div></div>
+                    </div>
+                </div>
+
+                <!-- 计算工具类 -->
+                <div class="tools-grid" data-category="calculator">
+                    <div class="tool-card" data-category="calculator">
+                        <h3><div class="tool-icon"><span>½</span></div>Crontab工具</h3>
+                        <p>一个简易的Crontab生成工具，支持随机生成Demo，编辑过程中，分时日月周会高亮提示</p>
+                    </div>
+                    <div class="tool-card" data-category="calculator">
+                        <h3><div class="tool-icon"><span>$</span></div>贷(还)款利率</h3>
+                        <p>贷款或还款利率的计算器，按月呈现还款计划；并支持按还款额反推贷款实际利率</p>
+                    </div>
+                    <div class="tool-card" data-category="calculator">
+                        <h3><div class="tool-icon"><span>♆</span></div>随机密码生成</h3>
+                        <p>将各种字符进行随机组合生成密码，可以由数字、大小写字母、特殊符号组成，支持指定长度</p>
+                    </div>
+                </div>
+
+                <!-- 其他工具 -->
+                <div class="tools-grid" data-category="other">
+                    <div class="tool-card" data-category="other">
+                        <h3><div class="tool-icon"><span>🧠</span></div>便捷思维导图</h3>
+                        <p>轻量便捷，随想随用，支持自动保存、本地数据存储、批量数据导入导出、图片格式下载等</p>
+                        <div class="tool-demo"><div class="mindmap-demo"><div class="node-main"></div><div class="connector"></div><div class="node-sub"></div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="other">
+                        <h3><div class="tool-icon"><span>📊</span></div>Excel转JSON</h3>
+                        <p>将Excel或CVS中的数据，直接转换成为结构化数据，如JSON、XML、MySQL、PHP等</p>
+                        <div class="tool-demo"><div class="excel-demo">Excel → JSON</div></div>
+                    </div>
+                    <div class="tool-card" data-category="other">
+                        <h3><div class="tool-icon"><span>📏</span></div>网页栅格标尺</h3>
+                        <p>Web开发用，横竖两把尺子，以10px为单位，用以检测&校准当前网页的栅格对齐率</p>
+                        <div class="tool-demo"><div class="ruler-demo"><div class="ruler-segment red"></div><div class="ruler-segment blue"></div><div class="ruler-segment red"></div></div></div>
+                    </div>
+                    <div class="tool-card" data-category="other">
+                        <h3><div class="tool-icon"><span>🔧</span></div>FH开发者工具</h3>
+                        <p>以开发平台的思想，FeHelper支持用户进行本地开发，将自己的插件功能集成进FH工具市场</p>
+                        <div class="tool-demo"><div class="devtools-demo">&lt;/&gt; 开发平台</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html> 
+
+
+
+
 
